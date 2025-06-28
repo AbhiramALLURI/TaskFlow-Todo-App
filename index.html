@@ -1,0 +1,26 @@
+<!-- index.html - Redesigned to match modern light layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing">
+  <div class="center-box">
+    <h1>Welcome to TaskFlow</h1>
+    <p style="margin-bottom: 1.2rem; color: #555">Manage your tasks efficiently with a beautiful interface</p>
+    <form id="user-form">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="date" id="dob" required>
+      <p id="error" class="error"></p>
+      <button type="submit">Continue</button>
+    </form>
+    <p class="note">You must be over 10 years old to use TaskFlow.</p>
+  </div>
+
+  <div id="locale-placeholder" data-locale="guj" hidden></div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- app.html - Updated for Left Sidebar Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="alt">
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <h1>TaskFlow</h1>
+    <button class="active" data-tab="todo">Todo (<span id="todo-count">0</span>)</button>
+    <button data-tab="completed">Completed (<span id="completed-count">0</span>)</button>
+    <button data-tab="archived">Archived (<span id="archived-count">0</span>)</button>
+  </div>
+
+  <!-- Main Content Panel -->
+  <div class="main-panel">
+    <div class="user-panel">
+      <div class="user-info">
+        <img id="avatar" src="" alt="User Avatar">
+        <span id="username">User</span>
+      </div>
+      <button id="signout">Sign Out</button>
+    </div>
+
+    <div class="task-entry">
+      <input type="text" id="task-text" placeholder="Enter your task">
+      <button id="add-task">Add Task</button>
+    </div>
+
+    <div id="todo" class="task-stage task-container active"></div>
+    <div id="completed" class="task-stage task-container"></div>
+    <div id="archived" class="task-stage task-container"></div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
