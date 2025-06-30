@@ -1,4 +1,4 @@
-<!-- app.html - Updated for Left Sidebar Layout dvdn -->
+<!-- app.html - Upgraded for All Features -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +7,10 @@
   <title>TaskFlow App</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="alt">
+<body class="alt light-mode">
 
   <!-- Sidebar Navigation -->
-  <div class="sidebar">
+  <div class="sidebar" id="sidebar">
     <h1>TaskFlow</h1>
     <button class="active" data-tab="todo">Todo (<span id="todo-count">0</span>)</button>
     <button data-tab="completed">Completed (<span id="completed-count">0</span>)</button>
@@ -24,11 +24,21 @@
         <img id="avatar" src="" alt="User Avatar">
         <span id="username">User</span>
       </div>
-      <button id="signout">Sign Out</button>
+      <div class="panel-actions">
+        <input type="text" id="search-bar" placeholder="Search tasks...">
+        <button id="theme-toggle">🌓</button>
+        <button id="signout">Sign Out</button>
+      </div>
     </div>
 
     <div class="task-entry">
       <input type="text" id="task-text" placeholder="Enter your task">
+      <input type="date" id="task-date">
+      <select id="task-priority">
+        <option value="low">🟢 Low</option>
+        <option value="medium" selected>🟡 Medium</option>
+        <option value="high">🔴 High</option>
+      </select>
       <button id="add-task">Add Task</button>
     </div>
 
@@ -38,7 +48,6 @@
   </div>
 
   <div id="toast" class="toast hidden"></div>
-
   <script src="app.js"></script>
 </body>
 </html>
